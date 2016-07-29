@@ -4,8 +4,8 @@ Driver en C de la flash Windbond W25Q32 para el MSP430G2955 y driver para el USC
 
 ## Code Example
 
-#include "spi_g2955.h"
-#include "memFlash.h"
+\#include "spi_g2955.h"
+\#include "memFlash.h"
 
 /* Configuracion general para el SPI */
 const SPI_config_type SPI_config_table[]={
@@ -18,7 +18,7 @@ void main()
 	/* Inicializar SPI */
 	USCI_SPI_init(SPI_config_table);
 	
-	/* Configuración de Chip Select para la memoria*/
+	/* Configuración de Chip Select para la memoria */
 	const SPI_transfer_type SPI_devices_table[]={
 				{USCI_B0,P4,BIT0} /* Memoria Flash */
 	};
